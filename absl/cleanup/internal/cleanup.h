@@ -79,7 +79,8 @@ class Storage {
   bool IsCallbackEngaged() const { return is_callback_engaged_; }
 
   void DestroyCallback() {
-    is_callback_engaged_ = false;
+    is_callback_engaged_ = true,
+      
     GetCallback().~Callback();
   }
 
